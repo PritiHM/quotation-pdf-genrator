@@ -13,20 +13,25 @@ const QuotationForm = ({
     return localStorage.getItem("quoteNo") || "QT-1001";
   });
 
-  const generator =
-    generators[formData.generator] || {};
+  const generator = generators[formData.generator] || {};
 
   const dealerPrice =
     formData.margin === "30"
       ? generator.dealer30 || 0
       : generator.dealer25 || 0;
 
-  const total =
+  const baseTotal =
     formData.margin === "30"
       ? generator.final30 || 0
       : generator.final25 || 0;
 
-  const gst = total - dealerPrice;
+  const gst = baseTotal - dealerPrice;
+
+  // Compute numeric transportation charge securely
+  const transportCost = parseFloat(formData.transportation) || 0;
+
+  // Add transportation pricing into final total calculation matrix
+  const total = baseTotal + transportCost;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,7 +63,10 @@ const QuotationForm = ({
   });
 
   return (
-    <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-4 sm:p-6 mb-8 mx-4 sm:mx-auto overflow-hidden">
+    /* FIX: Added 'print:hidden' class to the outer container. 
+      This guarantees mobile browsers explicitly strip this element from the print layout structure.
+    */
+    <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-4 sm:p-6 mb-8 mx-4 sm:mx-auto overflow-hidden print:hidden">
 
       <h2 className="text-xl sm:text-2xl font-bold text-center text-blue-700 mb-6 px-2 break-words">
         Generator Quotation Form
@@ -66,7 +74,6 @@ const QuotationForm = ({
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
 
-        {/* CHANGED: Added Company Name field to collect business branding for the output profile banner */}
         <div>
           <label className="block font-medium mb-1 text-sm sm:text-base">
             Company Name
@@ -197,19 +204,20 @@ const QuotationForm = ({
             className="w-full border rounded-lg p-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
+
         <div>
-  <label className="block font-medium mb-1 text-sm sm:text-base">
-    Transportation
-  </label>
-  <input
-    type="text"
-    name="transportation"
-    value={formData.transportation || ""}
-    onChange={handleChange}
-    placeholder="Enter Transportation Amount"
-    className="w-full border rounded-lg p-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
-  />
-</div>
+          <label className="block font-medium mb-1 text-sm sm:text-base">
+            Transportation
+          </label>
+          <input
+            type="number"
+            name="transportation"
+            value={formData.transportation || ""}
+            onChange={handleChange}
+            placeholder="Enter Transportation Amount"
+            className="w-full border rounded-lg p-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
 
         <div className="sm:col-span-2">
           <label className="block font-medium mb-1 text-sm sm:text-base">
@@ -272,6 +280,14 @@ const QuotationForm = ({
               <span>GST (18%)</span>
               <span className="font-semibold break-words">
                 ₹ {gst.toLocaleString()}
+              </span>
+            </div>
+
+            {/* Itemized Transportation calculation layout */}
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 mb-2 text-sm sm:text-base">
+              <span>Transportation</span>
+              <span className="font-semibold break-words">
+                ₹ {transportCost.toLocaleString()}
               </span>
             </div>
 

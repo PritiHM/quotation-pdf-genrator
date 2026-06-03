@@ -182,3 +182,17 @@
     border-right-color: var(--border);
   }
 }
+@media print {
+  /* Hide the form completely */
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  /* Ensure the targeted element has full visibility and resets page boundaries cleanly */
+  #quotation-pdf, [ref="printRef"] {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
