@@ -120,7 +120,7 @@ const TechnicalDetails = () => {
         will be SS/Zinc coated MS.
       </p>
 
-      <h3 className="font-bold mt-2">LIGHTING:</h3>
+      <h3 className="font-bold mt-">LIGHTING:</h3>
        <p>
         1 no. lamp with ON/OFF switch and socket inside the canopy will be provided.
       </p>
