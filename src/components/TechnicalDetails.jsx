@@ -87,10 +87,7 @@ const TechnicalDetails = () => {
         aesthetic looking product.
       </p>
 
-      <h3 className="font-bold mt-6">TYPE:</h3>
-      <p>Canopy will be six sided.</p>
-
-      <h3 className="font-bold mt-4">BASE:</h3>
+    <h3 className="font-bold mt-4">BASE:</h3>
       <p>2.5 mm Thick CRCA sheet is used for Base.</p>
 
       <h3 className="font-bold mt-4">CANOPY:</h3>
