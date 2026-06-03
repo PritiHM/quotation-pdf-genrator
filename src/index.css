@@ -7,7 +7,7 @@
 
   .pdf-page {
     width: 210mm !important;
-    min-height: 297mm !important;
+    min-height: auto !important;
     page-break-after: always;
     break-after: page;
     overflow: hidden;
