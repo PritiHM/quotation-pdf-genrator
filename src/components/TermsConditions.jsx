@@ -1,6 +1,7 @@
 const TermsConditions = () => {
   return (
-    <div className="text-[13px] leading-6 w-full max-w-full overflow-hidden px-4 sm:px-0">
+    <div className="text-[13px] leading-6 w-full max-w-full overflow-hidden px-4 sm:px-5
+    ">
 
       <h1 className="text-lg sm:text-xl font-bold text-center mb-8 break-words">
         TERMS & CONDITIONS
