@@ -196,3 +196,10 @@
     padding: 0 !important;
   }
 }
+.pdf-page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 24px 32px;
+  box-sizing: border-box;
+  background: white;
+}
