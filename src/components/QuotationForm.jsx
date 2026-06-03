@@ -1,12 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import { useReactToPrint } from "react-to-print";
 import generators from "../data/generators";
+
 
 const QuotationForm = ({
   formData,
   setFormData,
   printRef,
 }) => {
+  const [quoteNo, setQuoteNo] = useState(() => {
+  return localStorage.getItem("quoteNo") || "QT-1001";
+});
 
   const generator =
     generators[formData.generator] || {};
@@ -35,10 +40,22 @@ const QuotationForm = ({
   };
 
   const downloadPDF = useReactToPrint({
-    contentRef: printRef,
-    documentTitle: `Quotation-${formData.customerName}`,
-  });
+  contentRef: printRef,
+  documentTitle: `Quotation-${quoteNo}-${formData.customerName}`,
 
+ onAfterPrint: () => {
+  const parts = quoteNo.split("/");
+
+  const currentNumber = parseInt(parts[2]);
+
+  const nextNumber = String(currentNumber + 1).padStart(5, "0");
+
+  const nextQuoteNo = `NUS/QTN/${nextNumber}/2026-2027`;
+
+  localStorage.setItem("quoteNo", nextQuoteNo);
+  setQuoteNo(nextQuoteNo);
+},
+});
   return (
     <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-4 sm:p-6 mb-8 mx-4 sm:mx-auto overflow-hidden">
 

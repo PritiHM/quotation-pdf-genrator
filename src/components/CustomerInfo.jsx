@@ -1,5 +1,5 @@
-const CustomerInfo = ({ data }) => {
-  const formattedDate = new Date(data.date).toLocaleDateString(
+const CustomerInfo = ({ data, quoteNo }) => {
+    const formattedDate = new Date(data.date).toLocaleDateString(
     "en-GB",
     {
       day: "numeric",
@@ -17,12 +17,12 @@ const CustomerInfo = ({ data }) => {
 
       <div className="flex flex-col sm:flex-row sm:justify-between gap-4 mb-6">
         <p className="break-words">
-          <span className="font-semibold">
-            Quote Ref No.
-          </span>
-          <br />
-          {data.quoteNo}
-        </p>
+  <span className="font-semibold">
+    Quote Ref No.
+  </span>
+  <br />
+  {quoteNo}
+</p>
 
         <p className="sm:text-right break-words">
           <span className="font-semibold">

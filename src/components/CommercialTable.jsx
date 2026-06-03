@@ -186,7 +186,7 @@ const CommercialTable = ({ data }) => {
           <tbody>
             <tr>
               <td className="border border-gray-400 p-2 font-semibold">
-                Dealer Price
+                Total Amount
               </td>
               <td className="border border-gray-400 p-2 text-right whitespace-nowrap">
                 ₹ {dealerPrice.toLocaleString()}
