@@ -15,9 +15,7 @@ const CommercialTable = ({ data }) => {
   return (
     <div className="text-[13px] leading-6 text-left sm:text-justify w-full overflow-hidden">
 
-      <p>
-        1 no. lamp with ON/OFF switch and socket inside the canopy will be provided.
-      </p>
+     
 
       <h3 className="font-bold mt-2">EARTHING:</h3>
       <p>

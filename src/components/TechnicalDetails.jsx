@@ -124,6 +124,9 @@ const TechnicalDetails = () => {
       </p>
 
       <h3 className="font-bold mt-4">LIGHTING:</h3>
+       <p>
+        1 no. lamp with ON/OFF switch and socket inside the canopy will be provided.
+      </p>
 
     </div>
   );
