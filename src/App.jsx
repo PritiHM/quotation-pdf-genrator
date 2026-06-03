@@ -50,13 +50,15 @@ function App() {
 
   return (
     <div className="bg-gray-200 py-4 md:py-10 px-2 md:px-0">
-      <QuotationForm
-        formData={formData}
-        setFormData={setFormData}
-        printRef={printRef}
-        quoteNo={quoteNo}
-        setQuoteNo={setQuoteNo}
-      />
+     <div className="quotation-form">
+  <QuotationForm
+    formData={formData}
+    setFormData={setFormData}
+    printRef={printRef}
+    quoteNo={quoteNo}
+    setQuoteNo={setQuoteNo}
+  />
+</div>
 
       <div ref={printRef} id="quotation-pdf">
        <Page1

@@ -1,1 +1,20 @@
 @import "tailwindcss";
+@media print {
+  .quotation-form {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  #quotation-pdf {
+    display: block !important;
+  }
+}
+@media print {
+  .quotation-form,
+  .quotation-form * {
+    display: none !important;
+  }
+}
