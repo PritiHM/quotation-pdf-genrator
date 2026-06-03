@@ -10,12 +10,15 @@ import Page4 from "./pages/page4";
 
 function App() {
   const [formData, setFormData] = useState({
+    companyName: "",
     customerName: "",
     address: "",
     mobile: "",
     email: "",
     generator: "35KVA",
     margin: "25",
+    transportation: "", // ADD THIS
+
     date: new Date().toISOString().split("T")[0],
     advanceAmount: "",
     balanceAmount: "",
@@ -28,13 +31,17 @@ function App() {
   );
 });
 
+
   const data = {
     ...generators[formData.generator],
 
+    companyName: formData.companyName,
     customerName: formData.customerName,
     address: formData.address,
     mobile: formData.mobile,
     email: formData.email,
+    transportation: formData.transportation, // ADD THIS
+
     date: formData.date,
     advanceAmount: formData.advanceAmount,
   };

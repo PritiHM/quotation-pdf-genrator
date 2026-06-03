@@ -108,15 +108,13 @@ const TermsConditions = () => {
         <p>Regards,</p>
 
         <p className="font-bold mt-3">
-          Mr. Harshal Mahajan
-        </p>
-
-        <p className="font-bold tracking-wide">
-          +91 8668250720 / 8983328537
-        </p>
-
-        <p className="font-bold mt-4">
+          Mr. Harshal Mahajan<br/>
+          +91 8668250720 / 8983328537<br/>
+          mail-sales@nexusurjasolutions.com<br/>
           For NEXUS URJA SOLUTIONS
+        </p>
+        <p className="font-bold mt-4">
+          Reach us at - www.nexusurjasolutions.com
         </p>
       </div>
 

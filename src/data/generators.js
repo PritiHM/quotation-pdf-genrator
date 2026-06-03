@@ -11,6 +11,7 @@ const generators = {
     dealer30: 252954,
     final30: 298486,
     amf: 16200,
+    emissionType: ""
   },
 
   "7.5KVA-3": {
@@ -24,6 +25,7 @@ const generators = {
     dealer30: 252954,
     final30: 298486,
     amf: 16200,
+    emissionType: ""
   },
 
   "10KVA-3": {
@@ -37,6 +39,7 @@ const generators = {
     dealer30: 280988,
     final30: 331566,
     amf: 19800,
+    emissionType: "EGR" ,
   },
 
   "15KVA-3": {
@@ -50,6 +53,8 @@ const generators = {
     dealer30: 305080,
     final30: 359994,
     amf: 22200,
+    emissionType: "EGR" ,
+
   },
 
   "20KVA-3": {
@@ -63,6 +68,8 @@ const generators = {
     dealer30: 341331,
     final30: 402771,
     amf: 22200,
+    emissionType: "EGR" ,
+
   },
 
   "25KVA-3": {
@@ -76,6 +83,8 @@ const generators = {
     dealer30: 401651,
     final30: 473948,
     amf: 30600,
+    emissionType: "EGR" ,
+
   },
 
   "30KVA-3": {
@@ -89,6 +98,8 @@ const generators = {
     dealer30: 441213,
     final30: 520631,
     amf: 31800,
+    emissionType: "EGR + DOC", 
+
   },
 
   "35KVA-3": {
@@ -102,6 +113,7 @@ const generators = {
     dealer30: 452426,
     final30: 533863,
     amf: 31800,
+    emissionType: "EGR + DOC",
   },
 
   "5KVA-1": {
@@ -115,6 +127,7 @@ const generators = {
     dealer30: 251715,
     final30: 297024,
     amf: 16200,
+
   },
 
   "7.5KVA-1": {
@@ -141,6 +154,7 @@ const generators = {
     dealer30: 285607,
     final30: 337016,
     amf: 19800,
+    emissionType: "EGR ",
   },
 
   "15KVA-1": {
@@ -154,6 +168,7 @@ const generators = {
     dealer30: 312382,
     final30: 368611,
     amf: 27000,
+    emissionType: "EGR ",
   },
 
   "20KVA-1": {
@@ -167,6 +182,7 @@ const generators = {
     dealer30: 352640,
     final30: 416115,
     amf: 31200,
+    emissionType: "EGR ",
   },
 
   "25KVA-1": {
@@ -180,6 +196,7 @@ const generators = {
     dealer30: 410788,
     final30: 484730,
     amf: 34500,
+    emissionType: "EGR ",
   },
 
   "30KVA-1": {
@@ -193,6 +210,7 @@ const generators = {
     dealer30: 460157,
     final30: 542985,
     amf: 39100,
+    emissionType: "EGR + DOC",
   },
 
   "35KVA-1": {
@@ -206,6 +224,7 @@ const generators = {
     dealer30: 478646,
     final30: 564802,
     amf: 46575,
+    emissionType: "EGR + DOC",
   },
   "40KVA-3": {
   kva: "40",
@@ -218,6 +237,7 @@ const generators = {
   dealer30: 494679,
   final30: 583721,
   amf: 32000,
+  emissionType: "EGR + DOC",
 },
 
 "45KVA-3": {
@@ -231,6 +251,7 @@ const generators = {
   dealer30: 514328,
   final30: 606907,
   amf: 35650,
+  emissionType: "EGR + DOC",
 },
 
 "50KVA-3": {
@@ -244,6 +265,7 @@ const generators = {
   dealer30: 562890,
   final30: 664210,
   amf: 41400,
+  emissionType: "EGR + DOC",
 },
 
 "60KVA-3": {
@@ -257,6 +279,7 @@ const generators = {
   dealer30: 572059,
   final30: 675030,
   amf: 43700,
+  emissionType: "EGR + DOC",
 },
 
 "82.5KVA-3": {
@@ -270,6 +293,7 @@ const generators = {
   dealer30: 892727,
   final30: 1053418,
   amf: 83950,
+  emissionType: "SCR + DOC",
 },
 
 "100KVA-3": {
@@ -283,6 +307,7 @@ const generators = {
   dealer30: 929395,
   final30: 1096686,
   amf: 86250,
+  emissionType: "SCR + DOC",
 },
 
 "125KVA-3": {
@@ -296,6 +321,7 @@ const generators = {
   dealer30: 973897,
   final30: 1149198,
   amf: 92000,
+  emissionType: "SCR + DOC",
 },
 
 "40KVA-1": {
@@ -309,6 +335,7 @@ const generators = {
   dealer30: 529493,
   final30: 624802,
   amf: 48875,
+  emissionType: "EGR + DOC",
 },
 
 "45KVA-1": {
@@ -322,6 +349,7 @@ const generators = {
   dealer30: 550280,
   final30: 649330,
   amf: 51175,
+  emissionType: "EGR + DOC",
 },
 
 "50KVA-1": {
@@ -335,6 +363,7 @@ const generators = {
   dealer30: 654133,
   final30: 771877,
   amf: 54625,
+  emissionType: "EGR + DOC",
 },
 
 "60KVA-1": {
@@ -348,6 +377,7 @@ const generators = {
   dealer30: 654133,
   final30: 771877,
   amf: 58650,
+  emissionType: "EGR + DOC",
 },
 
 };

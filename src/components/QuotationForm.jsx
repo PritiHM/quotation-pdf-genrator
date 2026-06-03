@@ -10,8 +10,8 @@ const QuotationForm = ({
   printRef,
 }) => {
   const [quoteNo, setQuoteNo] = useState(() => {
-  return localStorage.getItem("quoteNo") || "QT-1001";
-});
+    return localStorage.getItem("quoteNo") || "QT-1001";
+  });
 
   const generator =
     generators[formData.generator] || {};
@@ -40,22 +40,23 @@ const QuotationForm = ({
   };
 
   const downloadPDF = useReactToPrint({
-  contentRef: printRef,
-  documentTitle: `Quotation-${quoteNo}-${formData.customerName}`,
+    contentRef: printRef,
+    documentTitle: `Quotation-${quoteNo}-${formData.customerName}`,
 
- onAfterPrint: () => {
-  const parts = quoteNo.split("/");
+    onAfterPrint: () => {
+      const parts = quoteNo.split("/");
 
-  const currentNumber = parseInt(parts[2]);
+      const currentNumber = parseInt(parts[2]);
 
-  const nextNumber = String(currentNumber + 1).padStart(5, "0");
+      const nextNumber = String(currentNumber + 1).padStart(5, "0");
 
-  const nextQuoteNo = `NUS/QTN/${nextNumber}/2026-2027`;
+      const nextQuoteNo = `NUS/QTN/${nextNumber}/2026-2027`;
 
-  localStorage.setItem("quoteNo", nextQuoteNo);
-  setQuoteNo(nextQuoteNo);
-},
-});
+      localStorage.setItem("quoteNo", nextQuoteNo);
+      setQuoteNo(nextQuoteNo);
+    },
+  });
+
   return (
     <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-4 sm:p-6 mb-8 mx-4 sm:mx-auto overflow-hidden">
 
@@ -64,6 +65,21 @@ const QuotationForm = ({
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+
+        {/* CHANGED: Added Company Name field to collect business branding for the output profile banner */}
+        <div>
+          <label className="block font-medium mb-1 text-sm sm:text-base">
+            Company Name
+          </label>
+          <input
+            type="text"
+            name="companyName"
+            value={formData.companyName || ""}
+            onChange={handleChange}
+            placeholder="Enter Your Company Name"
+            className="w-full border rounded-lg p-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
 
         <div>
           <label className="block font-medium mb-1 text-sm sm:text-base">
@@ -181,6 +197,19 @@ const QuotationForm = ({
             className="w-full border rounded-lg p-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
+        <div>
+  <label className="block font-medium mb-1 text-sm sm:text-base">
+    Transportation
+  </label>
+  <input
+    type="text"
+    name="transportation"
+    value={formData.transportation || ""}
+    onChange={handleChange}
+    placeholder="Enter Transportation Amount"
+    className="w-full border rounded-lg p-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+  />
+</div>
 
         <div className="sm:col-span-2">
           <label className="block font-medium mb-1 text-sm sm:text-base">

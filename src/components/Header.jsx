@@ -43,8 +43,8 @@ const Header = () => {
         Office: Flat No. G-1403, Yashada Splendid Park, Dudulgaon, Moshi, Pune-412105
       </p>
 
-      <div className="text-center text-xs mt-1 px-4 text-gray-700 flex flex-wrap justify-center gap-x-2 gap-y-0.5">
-        <span className="inline-block">Sales: 8668250720</span>
+      <div className="text-center text-xs mt-1 px-4 text-gray-900 flex flex-wrap justify-center gap-x-2 gap-y-0.5">
+        <span className="inline-block">Sales: +91 8668250720 / 8983328537</span>
         <span className="hidden sm:inline">|</span>
         <span className="inline-block">Email: sales@nexusurjasolutions.com</span>
         <span className="hidden sm:inline">|</span>
