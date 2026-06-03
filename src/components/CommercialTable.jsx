@@ -15,12 +15,12 @@ const CommercialTable = ({ data }) => {
   return (
     <div className="text-[13px] leading-6 text-left sm:text-justify w-full overflow-hidden">
 
-      <h3 className="font-bold mt-2">EARTHING:</h3>
+      <h3 className="font-bold mt-3">EARTHING:</h3>
       <p>
         The Earthing arrangements for DG set / Canopy will be homogenous.
       </p>
 
-      <h3 className="font-bold mt-2">PAINTING:</h3>
+      <h3 className="font-bold mt-3">PAINTING:</h3>
       <p>
         All metal surfaces will be thoroughly treated with degreasing,
         derusting and phosphating in our in-house fully-automated,
@@ -28,48 +28,48 @@ const CommercialTable = ({ data }) => {
         before final powder coating. The finish will be suitable for outdoor use.
       </p>
 
-      <h3 className="font-bold mt-2">NOISE LEVEL PERFORMANCE:</h3>
+      <h3 className="font-bold mt-3">NOISE LEVEL PERFORMANCE:</h3>
       <p>
         The maximum noise level permitted during full load will be 75 dB,
         measured at 1 meter distance from the edge of canopy.
         The product shall be certified by CPCB as per latest sound norms.
       </p>
 
-      <h3 className="font-bold mt-2">FUEL FILLING & DRAIN:</h3>
+      <h3 className="font-bold mt-3">FUEL FILLING & DRAIN:</h3>
       <p>
         Suitable external fuel filling and drainage connections with locking
         facility will be provided.
       </p>
 
-      <h3 className="font-bold mt-2">FUEL TANK:</h3>
+      <h3 className="font-bold mt-3">FUEL TANK:</h3>
       <p>
         The fuel tank shall be removable type. The tank shall be fabricated
         from CRCA / HR Pickled / MS, minimum 2 mm thick sheet.
       </p>
 
-      <h3 className="font-bold mt-2">TEMPERATURE RISE INSIDE CANOPY:</h3>
+      <h3 className="font-bold mt-3">TEMPERATURE RISE INSIDE CANOPY:</h3>
       <p>
         The maximum permissible temperature rise above the ambient
         will be 5°C to 7°C as per IS standard.
       </p>
 
-      <h3 className="font-bold mt-2">VENTILATION:</h3>
+      <h3 className="font-bold mt-3">VENTILATION:</h3>
       <p>
         The canopy is equipped with a forced air circulation fan of reputed make.
       </p>
 
-      <h3 className="font-bold mt-2">ANTI VIBRATION PADS:</h3>
+      <h3 className="font-bold mt-3">ANTI VIBRATION PADS:</h3>
       <p>
         The anti-vibration pads will be provided below diesel engine and alternator.
       </p>
 
-      <h3 className="font-bold mt-2">EMERGENCY PUSH STOP BUTTON:</h3>
+      <h3 className="font-bold mt-3">EMERGENCY PUSH STOP BUTTON:</h3>
       <p>
         The canopy will have provision of emergency push button which shall
         be housed in a protective enclosure with a glass front.
       </p>
 
-      <p className="mt-4">
+      <p className="mt-3">
         Design / Specifications are subject to change due to continual
         improvement process.
       </p>
