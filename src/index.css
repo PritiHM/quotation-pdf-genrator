@@ -12,9 +12,3 @@
     display: block !important;
   }
 }
-@media print {
-  .quotation-form,
-  .quotation-form * {
-    display: none !important;
-  }
-}
