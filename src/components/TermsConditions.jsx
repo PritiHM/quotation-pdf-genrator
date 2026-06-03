@@ -105,7 +105,7 @@ const TermsConditions = () => {
 
       </div>
 
-      <div className=" font-bold mt-12 break-words">
+      <div className=" font-bold mt-4 break-words">
         <p>Regards,</p>
 
         <p className="font-bold mt-3">
