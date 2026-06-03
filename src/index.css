@@ -1,15 +1,1 @@
 @import "tailwindcss";
-@media print {
-  @page {
-    size: A4;
-    margin: 0;
-  }
-
-  .pdf-page {
-    width: 210mm !important;
-    min-height: auto !important;
-    page-break-after: always;
-    break-after: page;
-    overflow: hidden;
-  }
-}
