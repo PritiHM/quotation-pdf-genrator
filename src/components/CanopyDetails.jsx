@@ -2,7 +2,7 @@ const CanopyDetails = () => {
   return (
     <div className="text-[13px] leading-6 text-left sm:text-justify w-full max-w-full overflow-hidden px-4 sm:px-0">
 
-      <h3 className="font-bold mt-4">BASE:</h3>
+      <h3 className="font-bold ">BASE:</h3>
       <p>2.5 mm Thick CRCA sheet is used for Base.</p>
 
       <h3 className="font-bold mt-4">CANOPY:</h3>

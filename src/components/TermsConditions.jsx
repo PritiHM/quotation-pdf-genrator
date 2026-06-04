@@ -1,12 +1,12 @@
 const TermsConditions = () => {
-return ( <div className="text-[12px] leading-4 w-full max-w-full overflow-hidden px-4">
+return ( <div className="text-[12px] leading-[18px] w-full max-w-full overflow-hidden px-4">
 
 
-  <h1 className="text-lg font-bold text-center mb-3 break-words">
+  <h1 className="text-lg font-bold text-center mb-4 break-words">
     TERMS & CONDITIONS
   </h1>
 
-  <div className="space-y-1">
+  <div className="space-y-2">
 
     <div>
       <h3 className="font-bold">GOODS & SERVICES TAX:</h3>
@@ -104,10 +104,10 @@ return ( <div className="text-[12px] leading-4 w-full max-w-full overflow-hidden
 
   </div>
 
-  <div className="font-bold mt-1 break-words">
+  <div className="font-bold mt-2 break-words">
     <p>Regards,</p>
 
-    <p className="font-bold mt-1">
+    <p className="font-bold mt-2">
       Mr. Harshal Mahajan
       <br />
       +91 8668250720 / 8983328537
@@ -117,12 +117,13 @@ return ( <div className="text-[12px] leading-4 w-full max-w-full overflow-hidden
       For NEXUS URJA SOLUTIONS
     </p>
 
-    <p className="font-bold mt-1">
+    <p className="font-bold mt-2">
       Reach us at - www.nexusurjasolutions.com
     </p>
   </div>
 
 </div>
+
 
 );
 };
