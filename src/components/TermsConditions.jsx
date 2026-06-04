@@ -1,7 +1,6 @@
 const TermsConditions = () => {
   return (
-    <div className="text-[13px] leading-6 w-full max-w-full overflow-hidden px-4 sm:px-5
-    ">
+   <div className="text-[12px] leading-5 w-full max-w-full overflow-hidden px-4">
 
       <h1 className="text-lg sm:text-xl font-bold text-center mb-8 break-words">
         TERMS & CONDITIONS
@@ -105,8 +104,13 @@ const TermsConditions = () => {
 
       </div>
 
-      <div className=" font-bold mt-4 break-words">
-        <p>Regards,</p>
+<div
+  className="font-bold mt-2 break-words"
+  style={{
+    pageBreakInside: "avoid",
+    breakInside: "avoid",
+  }}
+>        <p>Regards,</p>
 
         <p className="font-bold mt-3">
           Mr. Harshal Mahajan<br/>

@@ -15,56 +15,64 @@ function App() {
     address: "",
     mobile: "",
     email: "",
-    generator: "35KVA",
+
+    generator: "35KVA-3",
     margin: "25",
-    transportation: "", // ADD THIS
+    transportation: "",
 
     date: new Date().toISOString().split("T")[0],
+
     advanceAmount: "",
     balanceAmount: "",
   });
 
   const [quoteNo, setQuoteNo] = useState(() => {
-  return (
-    localStorage.getItem("quoteNo") ||
-    "NUS/QTN/03044/2026-2027"
-  );
-});
-
+    return (
+      localStorage.getItem("quoteNo") ||
+      "NUS/QTN/03044/2026-2027"
+    );
+  });
 
   const data = {
-    ...generators[formData.generator],
+    ...(generators[formData.generator] || {}),
 
     companyName: formData.companyName,
     customerName: formData.customerName,
     address: formData.address,
     mobile: formData.mobile,
     email: formData.email,
-    transportation: formData.transportation, // ADD THIS
+
+    transportation: formData.transportation,
+    margin: formData.margin,
 
     date: formData.date,
+
     advanceAmount: formData.advanceAmount,
+    balanceAmount: formData.balanceAmount,
   };
 
   const printRef = useRef();
 
   return (
     <div className="bg-gray-200 py-4 md:py-10 px-2 md:px-0">
-     <div className="quotation-form">
-  <QuotationForm
-    formData={formData}
-    setFormData={setFormData}
-    printRef={printRef}
-    quoteNo={quoteNo}
-    setQuoteNo={setQuoteNo}
-  />
-</div>
+      {/* Form Section */}
+      <div className="quotation-form">
+        <QuotationForm
+          formData={formData}
+          setFormData={setFormData}
+          printRef={printRef}
+          quoteNo={quoteNo}
+          setQuoteNo={setQuoteNo}
+        />
+      </div>
 
+      {/* PDF Content */}
       <div ref={printRef} id="quotation-pdf">
-       <Page1
-  data={data}
-  quoteNo={quoteNo}
-/>
+
+        <Page1
+          data={data}
+          quoteNo={quoteNo}
+        />
 
         <div className="h-8"></div>
 
@@ -72,11 +80,15 @@ function App() {
 
         <div className="h-8"></div>
 
-        <Page3 data={data} />
+        <Page3 />
 
         <div className="h-8"></div>
 
         <Page4 data={data} />
+
+        <div className="h-8"></div>
+
+
       </div>
     </div>
   );

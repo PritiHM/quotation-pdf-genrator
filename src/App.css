@@ -203,3 +203,28 @@
   box-sizing: border-box;
   background: white;
 }
+@media print {
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page-container,
+  .pdf-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    overflow: hidden !important;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .page-container:last-child,
+  .pdf-page:last-child {
+    page-break-after: auto;
+  }
+
+  #quotation-pdf {
+    width: 210mm !important;
+  }
+}

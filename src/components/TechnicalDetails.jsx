@@ -87,43 +87,6 @@ const TechnicalDetails = () => {
         aesthetic looking product.
       </p>
 
-    <h3 className="font-bold mt-2">BASE:</h3>
-      <p>2.5 mm Thick CRCA sheet is used for Base.</p>
-
-      <h3 className="font-bold mt-2">CANOPY:</h3>
-      <p className="break-words">
-        Doors & Roof shall be fabricated from MS CRCA of adequate thickness
-        with airtight EPDM foam gasket. MS/Zinc die cast hinges will be provided.
-      </p>
-
-      <h3 className="font-bold mt-2">INSULATION:</h3>
-      <p className="break-words">
-        The insulation material will be PU Foam. The material is fire retardant.
-      </p>
-
-      <h3 className="font-bold mt-2">WINDOW FOR CONTROL PANEL:</h3>
-      <p className="break-words">
-        Windows for control panel will be with glass/acrylic and sealed
-        with neoprene rubber gasket.
-      </p>
-
-      <h3 className="font-bold mt-2">AIR INLET & AIR OUTLET:</h3>
-      <p className="break-words">
-        Air inlet and outlet louvers, with special sound reduction dampers
-        for proper air ventilation will be provided.
-      </p>
-
-      <h3 className="font-bold mt-2">CONSTRUCTION:</h3>
-      <p className="break-words">
-        The construction will be modular, bolted construction and will have
-        access from all sides. All fasteners will have washers. The fasteners
-        will be SS/Zinc coated MS.
-      </p>
-
-      <h3 className="font-bold mt-">LIGHTING:</h3>
-       <p>
-        1 no. lamp with ON/OFF switch and socket inside the canopy will be provided.
-      </p>
 
     </div>
   );
