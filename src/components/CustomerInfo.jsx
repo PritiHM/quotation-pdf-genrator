@@ -39,6 +39,9 @@ const CustomerInfo = ({ data, quoteNo }) => {
         <p className="font-bold pt-1">
           Mob: {data.mobile}
         </p>
+        <p className="font-bold break-words">
+  {data.address}
+</p>
       </div>
 
       <p className="mt-3 font-bold break-words text-xs sm:text-sm">
